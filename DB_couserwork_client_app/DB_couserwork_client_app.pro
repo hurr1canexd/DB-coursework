@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       += core gui
+QT       += sql
+CONFIG   += c++11
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -13,8 +15,21 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    authorizationdialog.cpp \
+    database.cpp \
+    user.cpp \
+    registrationdialog.cpp
 
-HEADERS  += mainwindow.h
+HEADERS  += mainwindow.h \
+    authorizationdialog.h \
+    database.h \
+    user.h \
+    registrationdialog.h
 
-FORMS    += mainwindow.ui
+FORMS    += mainwindow.ui \
+    authorizationdialog.ui \
+    registrationdialog.ui
+
+RESOURCES += \
+    resources.qrc
