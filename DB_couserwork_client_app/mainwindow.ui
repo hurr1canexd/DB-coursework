@@ -6,20 +6,62 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>739</width>
-    <height>442</height>
+    <width>823</width>
+    <height>548</height>
    </rect>
   </property>
-  <widget class="QWidget" name="centralWidget"/>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="userLabel">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Вы авторизованы как:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>25</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>739</width>
+     <width>823</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>Файл</string>
+    </property>
+    <addaction name="action_exit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>?</string>
+    </property>
+    <addaction name="action_help"/>
+    <addaction name="action_about"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -30,6 +72,24 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="action_exit">
+   <property name="text">
+    <string>Выход</string>
+   </property>
+  </action>
+  <action name="action_help">
+   <property name="text">
+    <string>Помощь</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+H</string>
+   </property>
+  </action>
+  <action name="action_about">
+   <property name="text">
+    <string>О программе</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

@@ -8,7 +8,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     // меняю ui главного окна
     this->setWindowIcon(QIcon(":/icons/client_app_icon.png"));
-    this->setWindowTitle("1234");
+    this->setWindowTitle("Кулинарная книга");
     ui->setupUi(this);
 
 
@@ -16,8 +16,8 @@ MainWindow::MainWindow(QWidget *parent) :
 //    this->hide();
 //    this->setVisible(false);
 
-    database = new Database();
-    database->openDatabase();
+//    database = new Database();
+//    database->openDatabase();
 
     authorization();
 }
@@ -25,11 +25,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
 void MainWindow::authorization()
 {
-    authDlg = new AuthorizationDialog(this);
-    authDlg->setDatabase(database);
+//    authDlg = new AuthorizationDialog(this);
+//    authDlg->setDatabase(database);
 
-    this->setFocusProxy(authDlg);
-    authDlg->show();
+//    this->setFocusProxy(authDlg);
+//    connect(authDlg, SIGNAL(autorizationOk(User)), this, SLOT(startClientWork(User)));
+//    authDlg->show();
 }
 
 
@@ -37,4 +38,24 @@ MainWindow::~MainWindow()
 {
     delete ui;
     delete database;
+}
+
+void MainWindow::startClientWork(User user)
+{
+    this->ui->userLabel->setText(user.getLogin());
+}
+
+void MainWindow::on_action_exit_triggered()
+{
+    this->close();
+}
+
+void MainWindow::on_action_help_triggered()
+{
+    QMessageBox::about(this, "Помощь", "Книга кулинарных рецептов");
+}
+
+void MainWindow::on_action_about_triggered()
+{
+    QMessageBox::about(this, "О программе", "Программа была слеплена одним загадочным студентом МАТИ.)");
 }

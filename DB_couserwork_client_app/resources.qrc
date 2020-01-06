@@ -2,4 +2,7 @@
     <qresource prefix="/icons">
         <file>client_app_icon.png</file>
     </qresource>
+    <qresource prefix="/backgorunds">
+        <file>new_year_background.jpg</file>
+    </qresource>
 </RCC>
