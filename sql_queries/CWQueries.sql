@@ -1,5 +1,6 @@
-USE DBCookbook19 -- database name
+USE Cookbook; -- database name
 GO
+
 
 /*
 	PROC Registration
@@ -180,13 +181,23 @@ GO
 
 
 /*
-	TRIGGER
+	PROC CreateBackup
 */
-IF OBJECT_ID('RecordAdding', 'TR') IS NOT NULL DROP TRIGGER RecordAdding;
+IF OBJECT_ID('CreateBackup', 'P') IS NOT NULL DROP PROC CreateBackup;
+GO
+CREATE PROC CreateBackup
+@Path AS VARCHAR(200)
+AS
+    BACKUP DATABASE Cookbook TO DISK = @Path
+	WITH NAME = 'Full Backup of MyDB';
 GO
 
 
-
+/*
+	TRIGGERS
+*/
+IF OBJECT_ID('RecordAdding', 'TR') IS NOT NULL DROP TRIGGER RecordAdding;
+GO
 CREATE TRIGGER RecordAdding ON Users
 AFTER INSERT
 AS
@@ -200,9 +211,6 @@ END
 GO
 
 
-/*
-	TRIGGER
-*/
 IF OBJECT_ID('RecordDeleting', 'TR') IS NOT NULL DROP TRIGGER RecordDeleting;
 GO
 CREATE TRIGGER RecordDeleting ON Users
@@ -215,23 +223,4 @@ BEGIN
 	FROM Users t 
 	INNER JOIN deleted i ON t.UserID=i.UserID 
 END
-GO
-
-
-/*
-PROC CreateBackup
-*/
-IF OBJECT_ID('CreateBackup', 'P') IS NOT NULL DROP PROC CreateBackup;
-GO
-CREATE PROC CreateBackup
-@Path AS VARCHAR(200)
-AS
-    BACKUP DATABASE DBCookbook15 TO DISK = @Path
-	WITH NAME = 'Full Backup of MyDB';
-GO
-
-
-CREATE VIEW MyView
-AS
-	SELECT [Login] FROM Users 
 GO
