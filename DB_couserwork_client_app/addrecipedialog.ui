@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddRecipeDialog</class>
+ <widget class="QDialog" name="AddRecipeDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>978</width>
+    <height>668</height>
+   </rect>
+  </property>
+  <widget class="QLabel" name="recipe_name_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>171</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Название рецепта:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="recipe_name_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>50</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="recipe_category_lineEdit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>50</y>
+     <width>281</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maxLength">
+    <number>30</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="recipe_category_label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>10</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Категория, в которой находится рецепт:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="add_recipe_Btn">
+   <property name="geometry">
+    <rect>
+     <x>710</x>
+     <y>50</y>
+     <width>191</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+   </property>
+   <property name="text">
+    <string>Добавить</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="calorie_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>100</y>
+     <width>241</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Калорийность блюда (ккал):</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="calorie_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>140</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>10000</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="cooking_time_label">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>100</y>
+     <width>251</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Время приготовления в минутах:</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="cooking_time_spinBox">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>140</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>300</number>
+   </property>
+  </widget>
+  <widget class="QTextEdit" name="recipe_description_textEdit">
+   <property name="geometry">
+    <rect>
+     <x>360</x>
+     <y>240</y>
+     <width>601</width>
+     <height>411</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTableWidget" name="ingredients_tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>240</y>
+     <width>311</width>
+     <height>411</height>
+    </rect>
+   </property>
+   <property name="columnCount">
+    <number>2</number>
+   </property>
+   <column/>
+   <column/>
+  </widget>
+  <widget class="QLabel" name="add_ingredients_label">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>200</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Ингредиенты:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="add_recipe_description_label">
+   <property name="geometry">
+    <rect>
+     <x>640</x>
+     <y>200</y>
+     <width>81</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Рецепт:</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="plus_Btn">
+   <property name="geometry">
+    <rect>
+     <x>260</x>
+     <y>200</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>+</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="minus_Btn">
+   <property name="geometry">
+    <rect>
+     <x>300</x>
+     <y>200</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>-</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
