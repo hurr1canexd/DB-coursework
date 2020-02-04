@@ -22,9 +22,7 @@ public:
     explicit AuthorizationDialog(QWidget *parent = 0);
     void setDatabase(Database *db);
     ~AuthorizationDialog();
-    QString getInfo(QString str) {
-        return "";
-    }
+    int getUserId();
 
 signals:
     void autorizationOk(User);
@@ -38,7 +36,7 @@ private:
 //    MainWindow *mw;
     Database *database;
     RegistrationDialog *regDlg;
-
+    int user_id;
 };
 
 #endif // AUTHORIZATIONDIALOG_H

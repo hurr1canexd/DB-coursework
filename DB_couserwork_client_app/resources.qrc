@@ -4,5 +4,6 @@
     </qresource>
     <qresource prefix="/backgorunds">
         <file>new_year_background.jpg</file>
+        <file>back.jpg</file>
     </qresource>
 </RCC>

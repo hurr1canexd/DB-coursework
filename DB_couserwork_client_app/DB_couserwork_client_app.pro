@@ -19,17 +19,20 @@ SOURCES += main.cpp\
     authorizationdialog.cpp \
     database.cpp \
     user.cpp \
-    registrationdialog.cpp
+    registrationdialog.cpp \
+    addrecipedialog.cpp
 
 HEADERS  += mainwindow.h \
     authorizationdialog.h \
     database.h \
     user.h \
-    registrationdialog.h
+    registrationdialog.h \
+    addrecipedialog.h
 
 FORMS    += mainwindow.ui \
     authorizationdialog.ui \
-    registrationdialog.ui
+    registrationdialog.ui \
+    addrecipedialog.ui
 
 RESOURCES += \
     resources.qrc

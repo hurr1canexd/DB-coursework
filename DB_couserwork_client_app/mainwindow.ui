@@ -11,31 +11,152 @@
    </rect>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QLabel" name="userLabel">
+   <widget class="QPushButton" name="show_add_recipe_dlg_Btn">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>20</x>
       <y>20</y>
-      <width>131</width>
-      <height>31</height>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+    </property>
     <property name="text">
-     <string>Вы авторизованы как:</string>
+     <string>Добавить рецепт</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label">
+   <widget class="QComboBox" name="categories_comboBox">
     <property name="geometry">
      <rect>
       <x>140</x>
-      <y>25</y>
-      <width>101</width>
+      <y>10</y>
+      <width>111</width>
       <height>21</height>
      </rect>
     </property>
-    <property name="text">
-     <string/>
+   </widget>
+   <widget class="QListView" name="recipes_listView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>100</y>
+      <width>256</width>
+      <height>371</height>
+     </rect>
     </property>
+   </widget>
+   <widget class="QTextEdit" name="recipe_textEdit">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>100</y>
+      <width>481</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="show_recipes_Btn">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>50</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+    </property>
+    <property name="text">
+     <string>Вывести рецепты</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="show_cur_recipe_Btn">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>20</y>
+      <width>161</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+    </property>
+    <property name="text">
+     <string>Показать выбранный рецепт</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="del_Btn">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>20</y>
+      <width>151</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+    </property>
+    <property name="text">
+     <string>Удалить рецепт</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>10</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Вы авторизованы как:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="userLabel">
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -47,21 +168,23 @@
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menu">
+   <widget class="QMenu" name="menu_file">
     <property name="title">
      <string>Файл</string>
     </property>
+    <addaction name="action_enter"/>
+    <addaction name="action_backup"/>
     <addaction name="action_exit"/>
    </widget>
-   <widget class="QMenu" name="menu_2">
+   <widget class="QMenu" name="menu_question">
     <property name="title">
      <string>?</string>
     </property>
     <addaction name="action_help"/>
     <addaction name="action_about"/>
    </widget>
-   <addaction name="menu"/>
-   <addaction name="menu_2"/>
+   <addaction name="menu_file"/>
+   <addaction name="menu_question"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -88,6 +211,16 @@
   <action name="action_about">
    <property name="text">
     <string>О программе</string>
+   </property>
+  </action>
+  <action name="action_enter">
+   <property name="text">
+    <string>Войти в другой аккаунт</string>
+   </property>
+  </action>
+  <action name="action_backup">
+   <property name="text">
+    <string>Создать бэкап</string>
    </property>
   </action>
  </widget>

@@ -10,13 +10,11 @@ RegistrationDialog::RegistrationDialog(QWidget *parent) :
     this->setWindowFlags(Qt::Dialog | Qt::MSWindowsFixedSizeDialogHint); // делаю окно нересайзбл
     this->setWindowFlags(this->windowFlags() & ~Qt::WindowContextHelpButtonHint); // удаляю знак вопроса из title bar'a
 
-    /*
-    QPixmap bkgnd(":/backgorunds/new_year_background.jpg");
+//    QPixmap bkgnd(":/backgorunds/back.jpg");
 //    bkgnd = bkgnd.scaled(this->size(), Qt::IgnoreAspectRatio);
-    QPalette palette;
-    palette.setBrush(QPalette::Background, bkgnd);
-    this->setPalette(palette);
-    */
+//    QPalette palette;
+//    palette.setBrush(QPalette::Background, bkgnd);
+//    this->setPalette(palette);
 
     ui->setupUi(this);
 }

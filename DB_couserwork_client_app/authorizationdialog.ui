@@ -7,22 +7,31 @@
     <x>0</x>
     <y>0</y>
     <width>523</width>
-    <height>281</height>
+    <height>287</height>
    </rect>
   </property>
   <widget class="QPushButton" name="authBtn">
    <property name="geometry">
     <rect>
      <x>200</x>
-     <y>180</y>
+     <y>190</y>
      <width>111</width>
-     <height>31</height>
+     <height>41</height>
     </rect>
    </property>
    <property name="font">
     <font>
      <pointsize>12</pointsize>
     </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
    </property>
    <property name="text">
     <string>Войти</string>
@@ -84,7 +93,7 @@
    <property name="geometry">
     <rect>
      <x>180</x>
-     <y>220</y>
+     <y>240</y>
      <width>151</width>
      <height>41</height>
     </rect>

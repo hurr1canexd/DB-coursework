@@ -10,13 +10,40 @@
     <height>277</height>
    </rect>
   </property>
-  <widget class="QWidget" name="layoutWidget">
+  <widget class="QPushButton" name="regBttn">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>16</y>
-     <width>511</width>
-     <height>241</height>
+     <x>188</x>
+     <y>200</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color: #E2F778;
+border-radius: 10px;
+}
+QPushButton:hover{
+background-color: #E9F79E
+}</string>
+   </property>
+   <property name="text">
+    <string>Зарегистрироваться</string>
+   </property>
+  </widget>
+  <widget class="QWidget" name="">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>531</width>
+     <height>161</height>
     </rect>
    </property>
    <layout class="QGridLayout" name="gridLayout">
@@ -32,10 +59,10 @@
       </property>
      </widget>
     </item>
-    <item row="0" column="2" colspan="2">
+    <item row="0" column="1">
      <widget class="QLineEdit" name="enterLoginLineEdit"/>
     </item>
-    <item row="1" column="0" colspan="2">
+    <item row="1" column="0">
      <widget class="QLabel" name="enterPassLabel">
       <property name="font">
        <font>
@@ -47,14 +74,14 @@
       </property>
      </widget>
     </item>
-    <item row="1" column="2" colspan="2">
+    <item row="1" column="1">
      <widget class="QLineEdit" name="enterPassLineEdit">
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
       </property>
      </widget>
     </item>
-    <item row="2" column="0" colspan="2">
+    <item row="2" column="0">
      <widget class="QLabel" name="confirmPassLabel">
       <property name="font">
        <font>
@@ -66,50 +93,12 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="2" colspan="2">
+    <item row="2" column="1">
      <widget class="QLineEdit" name="confirmPassLineEdit">
       <property name="echoMode">
        <enum>QLineEdit::Password</enum>
       </property>
      </widget>
-    </item>
-    <item row="3" column="0">
-     <spacer name="leftHorizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>98</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
-    </item>
-    <item row="3" column="1" colspan="2">
-     <widget class="QPushButton" name="regBttn">
-      <property name="font">
-       <font>
-        <pointsize>12</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>Зарегистрироваться</string>
-      </property>
-     </widget>
-    </item>
-    <item row="3" column="3">
-     <spacer name="rightHorizontalSpacer">
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="sizeHint" stdset="0">
-       <size>
-        <width>128</width>
-        <height>20</height>
-       </size>
-      </property>
-     </spacer>
     </item>
    </layout>
   </widget>
